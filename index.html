@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-const API_URL='https://script.google.com/macros/s/AKfycbwB7xv0WHbf0b95I_ZmyUBwdGW0pOr1BQ1_F0xQKiJImDSKiBGUs2GRMj-wHIo8-3YCmw/exec';
 <html lang="ko">
 <head>
 <base target="_top">
@@ -87,7 +86,7 @@ let WHO='';try{WHO=localStorage.getItem('who')||''}catch(e){}
 const S={who:WHO,admin:false,pin:'',blocks:[],tab:'rooms',date:'',tdate:'',tmode:'class',tsel:'',hl:'',form:{},B:null,L:[],R:[],ver:'',hist:'전체',cache:{}};
 const $=s=>document.querySelector(s);
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const API_URL='여기에 웹앱 URL을 붙여넣기';  // GitHub Pages 등 외부에서 쓸 때만 (Apps Script 안에서는 무시)
+const API_URL='https://script.google.com/macros/s/AKfycbwB7xv0WHbf0b95I_ZmyUBwdGW0pOr1BQ1_F0xQKiJImDSKiBGUs2GRMj-wHIo8-3YCmw/exec';  // GitHub Pages 등 외부에서 쓸 때만 (Apps Script 안에서는 무시)
 const inGAS=typeof google!=='undefined'&&google.script&&google.script.run;
 const API=new URLSearchParams(location.search).get('api')||API_URL;
 const gs=(fn,...a)=>inGAS?new Promise((ok,no)=>google.script.run.withSuccessHandler(ok).withFailureHandler(no)[fn](...a)):
